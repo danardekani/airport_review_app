@@ -1,0 +1,24 @@
+language: ruby
+
+rvm:
+  - 2.7.0
+  - 2.6.5
+  - 2.5.7
+
+gemfile:
+  - gemfiles/rails_60.gemfile
+  - gemfiles/rails_52.gemfile
+  - gemfiles/rails_51.gemfile
+  - gemfiles/rails_50.gemfile
+  - gemfiles/rails_42.gemfile
+
+matrix:
+  exclude:
+    - rvm: 2.7.0
+      gemfile: gemfiles/rails_52.gemfile
+    - rvm: 2.7.0
+      gemfile: gemfiles/rails_51.gemfile
+    - rvm: 2.7.0
+      gemfile: gemfiles/rails_50.gemfile
+    - rvm: 2.7.0
+      gemfile: gemfiles/rails_42.gemfile
